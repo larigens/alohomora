@@ -13,25 +13,29 @@ No installation is required. Simply the website below:
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 
-## Screenshots
+## Mock-Up
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+The following image shows the web application's appearance and functionality:
 
+![App Screenshot](./assets/images/demo.png)
 
 ## Usage/Examples
 
-```javascript
-import Component from 'my-project'
+```bash
+This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. 
+```
 
-function App() {
-  return <Component />
-}
+```javascript
+It has a clean and polished and responsive user interface that adapts to various screen sizes, so feel free to use it on your smartphone or tablet
+```
+
+```javascript
+The password can include special characters. 
 ```
 
 ## Support
 
-For support, email larigens@gmail.com or join our Slack channel.
-
+For support, email larigens@gmail.com.
 
 ## Acknowledgements
 
@@ -41,6 +45,7 @@ For support, email larigens@gmail.com or join our Slack channel.
 
 - [FrontEnd Trend](https://linktr.ee/frontend_trend)
 
+- [OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters)
 
 ## Feedback
 
