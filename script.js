@@ -1,161 +1,155 @@
-// Assignment Code
+// Assignment Code.
 
-// Criterias that can be selected
-var lowLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upLetters = lowLetters.toUpperCase();
-// var upLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var char = ['"', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '"',]
-
-
-// Button to generate a password
+// Add event listener to generate button.
 var generateBtn = document.getElementById("generate");
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword())
+// Need to add the function to ensure that the prompts don't appear until the button is clicked.
+// INPUT - ONCLICK
+generateBtn.addEventListener("click", function getPw(event) {
+  event.preventDefault()
+  // DO WORK
+  var password = generatePassword();
+  // OUTPUT
+  return password;
+});
 
-function writePassword() {
-  password = generatePassword()
-};
+
+// Arrays with all possible characters.
+var lowLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var specialChar = ['"', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '"'];
 
 
-// Series of prompts for password criteria
+// The values of the variables have not yet been assigned because they will be user-defined. However, it needs to be declared before so that it can be inserted into the functions ahead.
+var inputLength;
+var inputLowLetters;
+var inputUpLetters;
+var inputNumbers;
+var inputSpecialChar;
+var criteria;
+// Empty array because we don't yet know what criteria the user wants to use.
+var randomPassword = [];
+
+
+// Series of prompts for password criteria.
 function generatePassword() {
   // A prompt box is used so that the user can input a value. The parseInt() is a function that can help to convert the values into integers.
-  // Prompted for the length of the password.
-  inputLength = parseInt(prompt("Enter the desired lenght of your password - from 8 to 128"))
+  // Prompt for the length of the password.
+  inputLength = parseInt(prompt("Enter the desired length of your password - from 8 to 128"));
+  // If the user clicks cancel.
   if (!inputLength) {
     // Displays an alert box with a message.
     alert("Please insert a value");
   }
+  // If the user enters an invalid value
   else if (inputLength < 8 || inputLength > 128) {
-    alert("Please insert a valid value");
+    alert("Please enter a valid value");
   }
-  // Prompted for the character types
+  // If the user enters a valid value, several prompts appear to select the types of characters he/she want in his/her password.
   else {
     alert("Please select at least one of the following options");
     // The confirm() method returns true if the user clicked "OK", otherwise false.
-    // Prompted for lowercase
+    // Prompt for lowercase letters.
     inputLowLetters = confirm("Would you like to include lowercase letters?");
-    // Prompted for uppercase
+    // Prompt for uppercase letters.
     inputUpLetters = confirm("Would you like to include uppercase letters?");
-    // Prompted for numbers
-    inputNumbers = confirm("Would you like to insert numbers?");
-    // Prompted for special characters
-    inputChar = confirm("Would you like to insert special characters?");
+    // Prompt for numeric characters.
+    inputNumbers = confirm("Would you like to include numeric characters?");
+    // Prompt for special characters.
+    inputSpecialChar = confirm("Would you like to include special characters?");
   }
 
-  var criteria;
-
-  // Validate input to confirm that at least one character type was selected.
-  // If none of the criteria is chosen
-  if (!inputLowLetters && !inputUpLetters && !inputNumbers && !inputChar) {
-    alert("You must select at least one criteria!")
+  // Validates inputs to confirm that at least one character type has been selected.
+  // If none of the criteria is chosen.
+  if (!inputLowLetters && !inputUpLetters && !inputNumbers && !inputSpecialChar) {
+    alert("You MUST select at least one criteria!")
   }
-  // If only 1 criteria is chosen
-  // If only the lowercase letter criteria is chosen
-  else if (inputLowLetters && !inputUpLetters && !inputNumbers && !inputChar) {
+  // If only one criteria is chosen.
+  // If only lowercase letters criteria is chosen.
+  else if (inputLowLetters && !inputUpLetters && !inputNumbers && !inputSpecialChar) {
     criteria = lowLetters;
   }
-  // If only the uppercase letter criteria is chosen
-  else if (!inputLowLetters && inputUpLetters && !inputNumbers && !inputChar) {
+  // If only uppercase letters criteria is chosen.
+  else if (!inputLowLetters && inputUpLetters && !inputNumbers && !inputSpecialChar) {
     criteria = upLetters;
   }
-  // If only the numbers criteria is chosen
-  else if (!inputLowLetters && !inputUpLetters && inputNumbers && !inputChar) {
+  // If only numeric characters criteria is chosen.
+  else if (!inputLowLetters && !inputUpLetters && inputNumbers && !inputSpecialChar) {
     criteria = numbers;
   }
-  // If only the special characters criteria is chosen
-  else if (!inputLowLetters && !inputUpLetters && !inputNumbers && inputChar) {
-    criteria = char;
+  // If only special characters criteria is chosen.
+  else if (!inputLowLetters && !inputUpLetters && !inputNumbers && inputSpecialChar) {
+    criteria = specialChar;
   }
 
-  // If 2 criterias are chosen
-  // If only the lowercase letter and uppercase letter criteria are chosen
-  else if (inputLowLetters && inputUpLetters && !inputNumbers && !inputChar) {
+  // If two criteria are chosen.
+  // If only lowercase letters and uppercase letters criteria are chosen.
+  else if (inputLowLetters && inputUpLetters && !inputNumbers && !inputSpecialChar) {
     criteria = lowLetters.concat(upLetters);
   }
-  // If only the lowercase letter and numbers criteria are chosen
-  else if (inputLowLetters && !inputUpLetters && inputNumbers && !inputChar) {
+  // If only lowercase letters and numeric characters criteria are chosen.
+  else if (inputLowLetters && !inputUpLetters && inputNumbers && !inputSpecialChar) {
     criteria = lowLetters.concat(numbers);
   }
-  // If only the lowercase letter and special characters criteria are chosen
-  else if (inputLowLetters && !inputUpLetters && !inputNumbers && inputChar) {
-    criteria = lowLetters.concat(char);
+  // If only lowercase letters and special characters criteria are chosen.
+  else if (inputLowLetters && !inputUpLetters && !inputNumbers && inputSpecialChar) {
+    criteria = lowLetters.concat(specialChar);
   }
-  // If only the uppercase letter and numbers criteria are chosen
-  else if (!inputLowLetters && inputUpLetters && inputNumbers && !inputChar) {
+  // If only uppercase letters and numeric characters criteria are chosen.
+  else if (!inputLowLetters && inputUpLetters && inputNumbers && !inputSpecialChar) {
     criteria = upLetters.concat(numbers);
   }
-  // If only the uppercase letter and special characters criteria are chosen
-  else if (!inputLowLetters && inputUpLetters && !inputNumbers && inputChar) {
-    criteria = upLetters.concat(char);
+  // If only uppercase letters and special characters criteria are chosen.
+  else if (!inputLowLetters && inputUpLetters && !inputNumbers && inputSpecialChar) {
+    criteria = upLetters.concat(specialChar);
   }
-  // If only the numbers and special characters criteria are chosen
-  else if (!inputLowLetters && !inputUpLetters && inputNumbers && inputChar) {
-    criteria = numbers.concat(char);
+  // If only numeric characters and special characters criteria are chosen.
+  else if (!inputLowLetters && !inputUpLetters && inputNumbers && inputSpecialChar) {
+    criteria = numbers.concat(specialChar);
   }
 
-  // If 3 criterias are chosen
-  // If only the lowercase letter, uppercase letter and numbers criteria are chosen
-  else if (inputLowLetters && inputUpLetters && inputNumbers && !inputChar) {
+  // If three criteria are chosen.
+  // If only lowercase letters, uppercase letters and numeric characters criteria are chosen.
+  else if (inputLowLetters && inputUpLetters && inputNumbers && !inputSpecialChar) {
     criteria = lowLetters.concat(upLetters, numbers);
   }
-  // If only the lowercase letter, uppercase letter and special characters criteria are chosen
-  else if (inputLowLetters && inputUpLetters && !inputNumbers && inputChar) {
-    criteria = lowLetters.concat(upLetters, char);
+  // If only lowercase letters, uppercase letters and special characters criteria are chosen.
+  else if (inputLowLetters && inputUpLetters && !inputNumbers && inputSpecialChar) {
+    criteria = lowLetters.concat(upLetters, specialChar);
   }
-  // If only the lowercase letter, numbers and special characters criteria are chosen
-  else if (inputLowLetters && !inputUpLetters && inputNumbers && inputChar) {
-    criteria = lowLetters.concat(numbers, char);
+  // If only lowercase letters, numeric characters and special characters criteria are chosen.
+  else if (inputLowLetters && !inputUpLetters && inputNumbers && inputSpecialChar) {
+    criteria = lowLetters.concat(numbers, specialChar);
   }
-  // If only the uppercase letter, numbers and special characters criteria are chosen
-  else if (!inputLowLetters && inputUpLetters && inputNumbers && inputChar) {
-    criteria = upLetters.concat(numbers, char);
-  }
-
-  // If all criterias are chosen
-  else if (inputLowLetters && inputUpLetters && inputNumbers && inputChar) {
-    criteria = lowLetters.concat(upLetters, numbers, char);
+  // If only uppercase letters, numeric characters and special characters criteria are chosen.
+  else if (!inputLowLetters && inputUpLetters && inputNumbers && inputSpecialChar) {
+    criteria = upLetters.concat(numbers, specialChar);
   }
 
-
-  // Generate random password that matches the selected criteria(s) 
-  // Should I use  random values crypto (?)
-  for (var i = 0; i = inputLength; i++) {
-    criteriaChoice = criteria[Math.floor(Math.random() * criteria.lenght)];
+  // If all criteria are chosen.
+  else if (inputLowLetters && inputUpLetters && inputNumbers && inputSpecialChar) {
+    criteria = lowLetters.concat(upLetters, numbers, specialChar);
   }
 
+  // Generate random password.
+
+  // Should I use random values crypto (?)
+  // 'i' needs to be less than the inputLength value because the index starts at 0.
+  for (var i = 0; i < inputLength; i++) {
+    // Generates random password according to tha chosen criteria.
+    var criteriaChosen = criteria[Math.floor(Math.random() * criteria.lenght)];
+    return criteriaChosen;
   }
-
-
-// Display the result into the text area.
-function displayPassword(password) {
-  // var password = generatePassword();
-  document.getElementById("password").placeholder = password;
+  criteriaChosen.push(randomPassword);
+  return randomPassword;
 }
 
+// Displays the result in the text area.
+function writePassword(event) {
+  event.preventDefault()
+  password = generatePassword();
+  passwordText = document.getElementById("password");
 
 
-
-
-
-
-
-//   var password = "";
-//   for (var i = 0; i <= passwordLength; i++) {
-//     var randomNumber = Math.floor(Math.random() * chars.length);
-//     password += chars.substring(randomNumber, randomNumber + 1);
-//   }
-//   document.getElementById("password").value = password;
-// }
-
-
-// function generatePassword() {
-//   var length = 8,
-//       retVal = "";
-//   for (var i = 0, n = charset.length; i < length; ++i) {
-//       retVal += charset.charAt(Math.floor(Math.random() * n));
-//   }
-//   return retVal;
-// }
-
+  passwordText.value.setAttribute("placeholder", password);
+}
