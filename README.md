@@ -4,12 +4,25 @@ An application that enables users to generate random passwords based on criteria
 
 ## Installation
 
-No installation is required. Simply the website below:
+No installation is required. Simply click on the link below to access the website.
 
 ```bash
   https://larigens.github.io/alohomora/
 ```
     
+OR
+
+If you would like to understand more about the code behind the app and edit it, click "code" - the green button. Once you're in code view, in the local tab, copy the SSH key. Open the terminal in your Macbook or [git bash](https://git-scm.com/downloads), if you have Windows, and type:
+
+```bash
+git clone [paste ssh key]
+```
+
+I would recommend downloading [Visual Studio Code](https://code.visualstudio.com/download) to edit the code locally. 
+
+[Detailed information about cloning a repository.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+
 ![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 
@@ -24,9 +37,10 @@ The following image shows the web application's appearance and functionality:
 ```bash
 This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. 
 ```
+<!-- Insert videos showing how to generate the pw -->
 
-```javascript
-It has a clean and polished and responsive user interface that adapts to various screen sizes, so feel free to use it on your smartphone or tablet
+```
+It has a responsive user interface that adapts to various screen sizes! **Feel free to use it on your smartphone or tablet.**
 ```
 
 ```javascript
@@ -46,6 +60,8 @@ For support, email larigens@gmail.com.
 - [FrontEnd Trend](https://linktr.ee/frontend_trend)
 
 - [OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters)
+  
+- [Rouvelle](https://www.rouvelle.com/javaScript_strings_to_numbers.htm)
 
 ## Feedback
 
