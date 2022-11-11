@@ -1,15 +1,15 @@
 :root {
+  --dark: #0000001a;
   --dark-shades: #00000026;
-  --dark-accent: #3b4954;
+  --dark-accent: #00000033;
+  --medium-dark: #3b4954;
   --main-brand: #af0808;
   --medium-accent: #c0c7cf;
   --light-accent: #f7fafc;
   --light-shades: #ffffff;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -21,8 +21,9 @@ body {
   text-align: center;
 }
 
+/* The first value is for top and bottom and the second value is for right and left */
 main {
-  padding: 30px 20px 0 20px;
+  padding: 30px 20px;
 }
 
 header {
@@ -37,51 +38,37 @@ header {
 
 .subtitle,
 .card {
-  color: var(--dark-accent);
-
+  color: var(--medium-dark);
 }
 
+/* Main content of the page, with lighter background and shadows to highlight */
 .card {
   margin: 0 auto;
   box-shadow: var(--dark-shades) 0px 2px 8px 0px;
   border-radius: 5px;
   border-width: 1px;
+  /* Reduces the width of the card */
   max-width: 800px;
   padding: 30px 40px;
   background-color: var(--light-shades);
 }
 
-/* .card-button::before,
-.card-header::after {
-  background: var(--medium-accent);
-}
-
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  height: 2px;
-} */
-
-.card-body {
-  min-height: 100px;
-}
-
-#password {
-  resize: none;
+textarea {
   margin: 10px 0;
   border: 2px dashed var(--medium-accent);
   border-radius: 6px;
+  /* Expandes the width of the textarea */
   width: 100%;
   padding: 15px 15px 85px 15px;
   font-size: 1.2rem;
   text-align: center;
 }
 
-.btn {
+button {
   cursor: pointer;
   margin: 16px 16px 16px 20px;
-  box-shadow: #0000001a 0px 1px 6px 0px #00000033 0px 1px 1px 0px;
+  box-shadow: var(--dark) 0px 1px 6px 0px var(--dark-accent) 0px 1px 1px 0px;
+  /* Removes the border of the button to show only the main-brand color */
   border: none;
   border-radius: 25px;
   padding: 14px 34px;
@@ -91,25 +78,21 @@ header {
   color: var(--light-shades);
 }
 
-/* button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-} */
-
+/* Media query to ensure responsiveness across multiple screens */
 @media (max-width: 690px) {
-  .btn {
+  button {
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
-  .btn,
-  #password {
+  button,
+  textarea {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 500px) {
-  .btn {
+  button {
     font-size: 0.8rem;
   }
 }

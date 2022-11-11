@@ -1,17 +1,5 @@
-// Assignment Code.
-
-// Add event listener to generate button.
-var generateBtn = document.getElementById("generate");
-// Need to add the function to ensure that the prompts don't appear until the button is clicked.
-// INPUT - ONCLICK
-generateBtn.addEventListener("click", function getPw(event) {
-  event.preventDefault()
-  // DO WORK
-  var password = generatePassword();
-  // OUTPUT
-  return password;
-});
-
+// As soon as the user clicks the button, a series of prompts will appear
+document.getElementById("generate").addEventListener("click", writePassword)
 
 // Arrays with all possible characters.
 var lowLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -19,20 +7,17 @@ var upLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChar = ['"', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '"'];
 
-
-// The values of the variables have not yet been assigned because they will be user-defined. However, it needs to be declared before so that it can be inserted into the functions ahead.
-var inputLength;
-var inputLowLetters;
-var inputUpLetters;
-var inputNumbers;
-var inputSpecialChar;
-var criteria;
-// Empty array because we don't yet know what criteria the user wants to use.
-var randomPassword = [];
-
-
 // Series of prompts for password criteria.
 function generatePassword() {
+
+  // The values of the variables have not yet been assigned because they will be user-defined. However, it needs to be declared before so that it can be called in the function.
+  var inputLength;
+  var inputLowLetters;
+  var inputUpLetters;
+  var inputNumbers;
+  var inputSpecialChar;
+  var criteria = [];
+
   // A prompt box is used so that the user can input a value. The parseInt() is a function that can help to convert the values into integers.
   // Prompt for the length of the password.
   inputLength = parseInt(prompt("Enter the desired length of your password - from 8 to 128"));
@@ -64,6 +49,12 @@ function generatePassword() {
   if (!inputLowLetters && !inputUpLetters && !inputNumbers && !inputSpecialChar) {
     alert("You MUST select at least one criteria!")
   }
+
+  // If all criteria are chosen.
+  else if (inputLowLetters && inputUpLetters && inputNumbers && inputSpecialChar) {
+    criteria = lowLetters.concat(upLetters, numbers, specialChar);
+  }
+
   // If only one criteria is chosen.
   // If only lowercase letters criteria is chosen.
   else if (inputLowLetters && !inputUpLetters && !inputNumbers && !inputSpecialChar) {
@@ -126,30 +117,31 @@ function generatePassword() {
     criteria = upLetters.concat(numbers, specialChar);
   }
 
-  // If all criteria are chosen.
-  else if (inputLowLetters && inputUpLetters && inputNumbers && inputSpecialChar) {
-    criteria = lowLetters.concat(upLetters, numbers, specialChar);
-  }
-
   // Generate random password.
 
   // Should I use random values crypto (?)
   // 'i' needs to be less than the inputLength value because the index starts at 0.
   for (var i = 0; i < inputLength; i++) {
     // Generates random password according to tha chosen criteria.
-    var criteriaChosen = criteria[Math.floor(Math.random() * criteria.lenght)];
-    return criteriaChosen;
+    var randomPassword = criteria[Math.floor(Math.random() * criteria.lenght)];
+    return randomPassword;
   }
-  criteriaChosen.push(randomPassword);
-  return randomPassword;
+
+  // Need to get this random password and transform into a string 
+  randomPassword.join("")
+
+  // randomPassword.join(newPassword)
+  // or 
+  // randomPassword.toString()
+  // Need to get this random password and transform into a string - try criteriachosen(join)
+
 }
 
 // Displays the result in the text area.
-function writePassword(event) {
-  event.preventDefault()
-  password = generatePassword();
-  passwordText = document.getElementById("password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.getElementById("password");
 
+  passwordText.value = password;
 
-  passwordText.value.setAttribute("placeholder", password);
 }

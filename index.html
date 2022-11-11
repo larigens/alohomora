@@ -11,23 +11,32 @@
 
 <body>
     <header>
-        <h1>Alohomora <span class="subtitle">The Password Generator</span></h1>
+        <h1>Alohomora
+            <!-- Break in line to make subtitle stay below title. -->
+            <br>
+            <span class="subtitle">Password Generator</span>
+        </h1>
     </header>
     <main>
+        <!--All divs have been added for styling purposes. -->
         <div class="card">
             <div class="card-header">
                 <h2>Generate a Password</h2>
             </div>
             <div class="card-body">
+                <!-- Textarea needs an id to interact with JavaSscript. -->
+                <!--  Placeholder describes the expected value of the textarea for the user. -->
                 <textarea readonly id="password" placeholder="Your Secure Password"
                     aria-label="Generated Password"></textarea>
+                <!-- Aria attributes allows a specification of the element's role to web robots. It is also good practice for screen readers and for SEO. -->
             </div>
             <div class="card-button">
-                <button id="generate" class="btn">Generate Password</button>
+                <!-- Button needs an id to interact with JavaSscript -->
+                <button id="generate">Generate Password</button>
             </div>
         </div>
-
     </main>
+    <!-- Connect HTML file to JavaScript file  -->
     <script src="script.js"></script>
 </body>
 
