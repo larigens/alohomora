@@ -15,7 +15,7 @@ No installation is required! This app will run in the browser and will feature d
     
 OR
 
-If you would like to understand more about the code behind the app and edit it, click "<> code" - the green button. Once you're in code view, in the local tab, copy the SSH key. Open the terminal in your Macbook or [git bash](https://git-scm.com/downloads), if you have Windows, and type:
+If you would like to understand more about the code behind the app and edit it, click "<> code" - the green button. After clicking, in the local tab, copy the SSH key. Open the terminal in your Macbook or [git bash](https://git-scm.com/downloads), if you have Windows, and type:
 
 ```bash
 git clone [paste ssh key]
@@ -33,8 +33,6 @@ The following image shows the web application's appearance and functionality:
 ![App Screenshot](./assets/images/screenshot.png)
 
 ## Usage/Examples
-
-<!-- Insert videos showing how to generate the pw -->
 
 First, the user needs to click on the red button to generate a password, and then a series of prompts will appear so that the desired type of criteria is selected.
 
