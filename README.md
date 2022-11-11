@@ -3,7 +3,7 @@
 
 ## Description
 
-An application that enables users to generate random passwords based on criteria that they’ve selected.
+An application that enables users to generate random passwords based on the criteria that they’ve selected.
 
 ## Installation
 

@@ -5,6 +5,7 @@
   --medium-dark: #3b4954;
   --main-brand: #af0808;
   --medium-accent: #c0c7cf;
+  --medium-light: #e7e9eb;
   --light-accent: #f7fafc;
   --light-shades: #ffffff;
 }
@@ -21,13 +22,13 @@ body {
   text-align: center;
 }
 
-/* The first value is for top and bottom and the second value is for right and left */
+/* The first value is for top and bottom and the second value is for right and left. */
 main {
   padding: 30px 20px;
 }
 
+/* Removed padding to bring the card closer to the header. */
 header {
-  padding: 8px 20px 20px 20px;
   color: var(--main-brand);
 }
 
@@ -41,7 +42,7 @@ header {
   color: var(--medium-dark);
 }
 
-/* Main content of the page, with lighter background and shadows to highlight */
+/* Main content of the page, with lighter background and shadows to highlight. */
 .card {
   margin: 0 auto;
   box-shadow: var(--dark-shades) 0px 2px 8px 0px;
@@ -53,14 +54,41 @@ header {
   background-color: var(--light-shades);
 }
 
+h2 {
+  font-size: 25px;
+  text-align: left;
+}
+
+.card-body {
+  height: 163px;
+}
+
+/* This is the gray line at the top and bottom of the textarea. */
+.card-header::after,
+.card-button::before {
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background: var(--medium-light);
+}
+
+.card-header::after,
+.card-button::before,
 textarea {
-  margin: 10px 0;
+  display: block;
+}
+
+textarea {
+  /* Ensures that the textarea is clean. */
+  resize: none;
+  margin: 10px auto;
   border: 2px dashed var(--medium-accent);
   border-radius: 6px;
-  /* Expandes the width of the textarea */
+  /* Expandes the width of the textarea. */
   width: 100%;
   padding: 15px 15px 85px 15px;
-  font-size: 1.2rem;
+  font-size: 19px;
+  /* The body property does not apply to the child of its child elements. */
   text-align: center;
 }
 
@@ -68,7 +96,7 @@ button {
   cursor: pointer;
   margin: 16px 16px 16px 20px;
   box-shadow: var(--dark) 0px 1px 6px 0px var(--dark-accent) 0px 1px 1px 0px;
-  /* Removes the border of the button to show only the main-brand color */
+  /* Removes the border of the button to show only the main-brand color. */
   border: none;
   border-radius: 25px;
   padding: 14px 34px;
@@ -78,7 +106,7 @@ button {
   color: var(--light-shades);
 }
 
-/* Media query to ensure responsiveness across multiple screens */
+/* Media query to ensure responsiveness across multiple screens. */
 @media (max-width: 690px) {
   button {
     margin: 16px 0px 0px 0px;
