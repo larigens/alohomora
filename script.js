@@ -16,26 +16,21 @@ function generatePassword() {
   var inputUpLetters;
   var inputNumbers;
   var inputSpecialChar;
-  var criteria = [];
+  var criteria;
 
   // A prompt box is used so that the user can input a value. The parseInt() is a function that can help to convert the values into integers.
   // Prompt for the length of the password.
   inputLength = parseInt(prompt("Enter the desired length of your password - from 8 to 128"));
-  // If the user clicks cancel.
-  if (!inputLength) {
+  // Need a loop to repeat this question until the value is 8 < x < 128.
+  while (inputLength < 8 || inputLength > 128 || !inputLength) {
     // Displays an alert box with a message.
-    alert("Please insert a value");
-  }
-  // If the user enters an invalid value
-  else if (inputLength < 8 || inputLength > 128) {
     alert("Please enter a valid value");
+    // Repeat
+    inputLength = parseInt(prompt("Enter the desired length of your password - from 8 to 128"));
   }
-  // Need a loop to repeat this question until value is 8 < x < 128
 
-
-  
   // If the user enters a valid value, several prompts appear to select the types of characters he/she want in his/her password.
-  else {
+  if (inputLength > 8 && inputLength < 128) {
     alert("Please select at least one of the following options");
     // The confirm() method returns true if the user clicked "OK", otherwise false.
     // Prompt for lowercase letters.
@@ -50,12 +45,22 @@ function generatePassword() {
 
   // Validates inputs to confirm that at least one character type has been selected.
   // If none of the criteria is chosen.
-  if (!inputLowLetters && !inputUpLetters && !inputNumbers && !inputSpecialChar) {
+  // Need a loop to repeat this question until at least one criteria is chosen.
+  while (!inputLowLetters && !inputUpLetters && !inputNumbers && !inputSpecialChar) {
     alert("You MUST select at least one criteria!")
+    // Repeat
+    // Prompt for lowercase letters.
+    inputLowLetters = confirm("Would you like to include lowercase letters?");
+    // Prompt for uppercase letters.
+    inputUpLetters = confirm("Would you like to include uppercase letters?");
+    // Prompt for numeric characters.
+    inputNumbers = confirm("Would you like to include numeric characters?");
+    // Prompt for special characters.
+    inputSpecialChar = confirm("Would you like to include special characters?");
   }
 
   // If all criteria are chosen.
-  else if (inputLowLetters && inputUpLetters && inputNumbers && inputSpecialChar) {
+  if (inputLowLetters && inputUpLetters && inputNumbers && inputSpecialChar) {
     criteria = lowLetters.concat(upLetters, numbers, specialChar);
   }
 
@@ -121,23 +126,22 @@ function generatePassword() {
     criteria = upLetters.concat(numbers, specialChar);
   }
 
+  // Empty array that will be populated according to the chosen criteria.
+  var randomPassword = [];
+
   // Generate random password.
 
   // Should I use random values crypto (?)
   // 'i' needs to be less than the inputLength value because the index starts at 0.
   for (var i = 0; i < inputLength; i++) {
     // Generates random password according to tha chosen criteria.
-    var randomPassword = criteria[Math.floor(Math.random() * criteria.lenght)];
+    randomPassword = randomPassword + criteria[Math.floor(Math.random() * criteria.lenght)];
     return randomPassword;
   }
 
   // Need to get this random password and transform into a string 
-  randomPassword.join("")
-
-  // randomPassword.join(newPassword)
-  // or 
-  // randomPassword.toString()
-  // Need to get this random password and transform into a string - try criteriachosen(join)
+  randomPassword.toString()
+  return randomPassword;
 
 }
 
