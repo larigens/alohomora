@@ -1,14 +1,17 @@
+
 # Alohomora
+
+## Description
 
 An application that enables users to generate random passwords based on criteria that they’ve selected.
 
 ## Installation
 
-No installation is required. Simply click on the link below to access the website.
+No installation is required! This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. Simply click on the link below:
 
-```bash
-  https://larigens.github.io/alohomora/
-```
+<img src="./assets/favicon/apple-touch-icon.png" alt="logo" width="80px" height="80px">
+
+[Alohomora](https://larigens.github.io/alohomora/)
     
 OR
 
@@ -20,32 +23,30 @@ git clone [paste ssh key]
 
 I would recommend downloading [Visual Studio Code](https://code.visualstudio.com/download) to edit the code locally. 
 
-[Detailed information about cloning a repository.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+Detailed information about [cloning a repository.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
 
-![App Screenshot](./assets/images/demo.png)
+![App Screenshot](./assets/images/screenshot.png)
 
 ## Usage/Examples
 
-```bash
-This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. 
-```
 <!-- Insert videos showing how to generate the pw -->
 
-```
-It has a responsive user interface that adapts to various screen sizes! **Feel free to use it on your smartphone or tablet.**
-```
+First, the user needs to click on the red button to generate a password, and then a series of prompts will appear so that the desired type of criteria is selected.
 
-```javascript
-The password can include special characters. 
-```
+1. Desired length of the password (From 8 to 128 characters),
+2. If the user would like to include lowercase letters,
+3. If the user would like to include uppercase letters,
+4. If the user would like to include numeric characters,
+5. If the user would like to include special characters.
+   
+> **The user MUST select at least one of the criteria, or an alert will be displayed.**
+
+If the user enters a valid length and selects at least one of the criteria, the password is then generated and displayed within the textarea.
 
 ## Support
 
