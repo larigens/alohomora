@@ -30,6 +30,10 @@ function generatePassword() {
   else if (inputLength < 8 || inputLength > 128) {
     alert("Please enter a valid value");
   }
+  // Need a loop to repeat this question until value is 8 < x < 128
+
+
+  
   // If the user enters a valid value, several prompts appear to select the types of characters he/she want in his/her password.
   else {
     alert("Please select at least one of the following options");
