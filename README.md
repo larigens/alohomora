@@ -25,7 +25,6 @@ I would recommend downloading [Visual Studio Code](https://code.visualstudio.com
 
 Detailed information about [cloning a repository.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-
 ## Mock-Up
 
 The following image shows the web application's appearance and functionality:
@@ -66,15 +65,11 @@ For support, email larigens@gmail.com.
 
 If you have any feedback, please contact me at larigens@gmail.com.
 
-
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://larigens.github.io/lari-gui/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lari-gui/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/coffeebr_eak)
 
-
 ## License
 
 Please refer to the [LICENSE](https://choosealicense.com/licenses/mit/) in the repo.
-
-
