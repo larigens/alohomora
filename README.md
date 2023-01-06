@@ -1,5 +1,18 @@
 
-# Alohomora
+<h1 align="center"> Alohomora </h1>
+
+<p align="center">
+    <img src="./assets/favicon/apple-touch-icon.png" alt="logo" width="120px" height="120px" />
+  <br>
+  <i>Alohomora is a password generator
+    <br> built using JavaScript.</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://larigens.github.io/alohomora/"><strong>Alohomora</strong></a>
+  <br>
+</p>
 
 ## Description
 
@@ -7,23 +20,17 @@ An application that enables users to generate random passwords based on the crit
 
 ## Installation
 
-No installation is required! This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. Simply click on the link below:
-
-<img src="./assets/favicon/apple-touch-icon.png" alt="logo" width="80px" height="80px">
-
-[Alohomora](https://larigens.github.io/alohomora/)
+No installation is required! This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. 
     
-OR
+BUT
 
-If you would like to understand more about the code behind the app and edit it, click "<> code" - the green button. After clicking, in the local tab, copy the SSH key. Open the terminal in your Macbook or [git bash](https://git-scm.com/downloads), if you have Windows, and type:
+If you would like to understand more about the code behind the app and edit it, click `<> code` - the green button. After clicking, in the local tab, copy the SSH key. Open the terminal in your Macbook or [git bash](https://git-scm.com/downloads), if you have Windows, and type:
 
 ```bash
 git clone [paste ssh key]
 ```
 
-I would recommend downloading [Visual Studio Code](https://code.visualstudio.com/download) to edit the code locally. 
-
-Detailed information about [cloning a repository.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+I would recommend downloading [Visual Studio Code](https://code.visualstudio.com/download) to edit the code locally. If you need more information on how to clone a repository, [click here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)!
 
 ## Mock-Up
 
