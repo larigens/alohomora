@@ -16,11 +16,11 @@
 
 
 ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-red.svg)
-![Contributors](https://img.shields.io/github/contributors/larigens/readme-lab?style=plastic&color=red)
-![Forks](https://img.shields.io/github/forks/larigens/readme-lab?style=plastic&color=red)
-![Stars](https://img.shields.io/github/stars/larigens/readme-lab?style=plastic&color=red)
-![Licence](https://img.shields.io/github/license/larigens/readme-lab?style=plastic&color=red)
-![Issues](https://img.shields.io/github/issues/larigens/readme-lab?style=plastic&color=red)
+![Contributors](https://img.shields.io/github/contributors/larigens/alohomora?style=plastic&color=red)
+![Forks](https://img.shields.io/github/forks/larigens/alohomora?style=plastic&color=red)
+![Stars](https://img.shields.io/github/stars/larigens/alohomora?style=plastic&color=red)
+![Licence](https://img.shields.io/github/license/larigens/alohomora?style=plastic&color=red)
+![Issues](https://img.shields.io/github/issues/larigens/alohomora?style=plastic&color=red)
 
 ---
 ## Description
@@ -32,11 +32,8 @@ An application that enables users to generate random passwords based on the crit
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
   - [Cloning the Repository](#cloning-the-repository)
-  - [Prerequisites](#prerequisites)
-  - [Setting Up](#setting-up)
 - [Mock-Up](#mock-up)
 - [Usage](#usage)
-- [Guide](#guide)
 - [Questions](#questions)
 - [Contributions](#contributions)
   - [Contributing Guidelines](#contributing-guidelines)
