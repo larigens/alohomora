@@ -2,7 +2,7 @@
 <h1 align="center"> Alohomora </h1>
 
 <p align="center">
-    <img src="./assets/favicon/apple-touch-icon.png" alt="logo" width="120px" height="120px" />
+    <img src="./assets/favicon/apple-touch-icon.png" alt="logo" width="100px" height="100px" />
   <br>
   <i>Alohomora is a password generator
     <br> built using JavaScript.</i>
