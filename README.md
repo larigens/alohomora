@@ -80,7 +80,10 @@ If the user enters a valid length and selects at least one of the criteria, the 
 
 ## Questions
 
-For questions and support please <a href="mailto:larigens@gmail.com">email me</a>!
+For questions and support feel free to contact me via:
+
+<a href="mailto:larigens@gmail.com">📧 Email </a>
+<a href="https://github.com/${github}">🐈‍⬛ GitHub </a>
 
 ## Contributions
 
