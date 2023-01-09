@@ -19,7 +19,7 @@
 ![Contributors](https://img.shields.io/github/contributors/larigens/alohomora?style=plastic&color=red)
 ![Forks](https://img.shields.io/github/forks/larigens/alohomora?style=plastic&color=red)
 ![Stars](https://img.shields.io/github/stars/larigens/alohomora?style=plastic&color=red)
-![Licence](https://img.shields.io/github/license/larigens/alohomora?style=plastic&color=red)
+![Licence](https://img.shields.io/static/v1?label=License&message=Apache-2.0&color=red)
 ![Issues](https://img.shields.io/github/issues/larigens/alohomora?style=plastic&color=red)
 
 ---
@@ -117,4 +117,4 @@ Our Code of Conduct follows the same principles as the [Contributor Covenant](ht
 
 ## License
 
-Please refer to the [LICENSE](https://choosealicense.com/licenses/mit/) in the repo.
+Please refer to the [LICENSE](https://choosealicense.com/licenses/apache-2.0/) in the repo.
